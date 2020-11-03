@@ -158,7 +158,9 @@ class NavbarContainer extends Component {
     const subMenuHoverBrowser = subMenuOpen && isBrowser && (
       <Submenu
         CategoryShop={subMenuCategorySelected}
-        itemsListByCategoryShop={subMenuCategorySelected === "foods" ? foods : cosmetics}
+        itemsListByCategoryShop={
+          subMenuCategorySelected === "foods" ? foods : cosmetics
+        }
         sendOneKeyword={sendOneKeyword}
         handleSubMenuExit={this.handleSubMenuExit}
       />

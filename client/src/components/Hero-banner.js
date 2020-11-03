@@ -37,8 +37,9 @@ const HeroBanner = () => (
   <Jumbotron fluid style={isMobile? bannerCoverMobile : bannerCoverPc}>
     <Container fluid style={{height: '300px'}}>
       <div style={textBanner}>
-        <h1 className="display-3" style={isMobile ? titleH1Mobile : titleH1Pc}>Fashion shop</h1>
-        <p>Cool shop</p>
+        <h3 className="display-3" style={isMobile ? titleH1Mobile : titleH1Pc}>Vegetable 100% Organic</h3>
+        <p>FRUIT FRESH</p>
+        <p>Free Pickup and Delivery Available</p>
       </div>
       <div style={centerButtons}>
         <ButtonLinkCategoryShopPage CategoryShop={'foods'} content='shop foods' />
