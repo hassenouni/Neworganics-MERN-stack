@@ -167,21 +167,77 @@ class NavbarContainer extends Component {
     );
 
     return (
-      <div className="sticky-top">
-        <Navbar light expand="md" style={navbarBackground}>
-          <Link to="/" style={itemMenu} className="text-white">
-            {" "}
-            Home
-          </Link>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            {categoriesNavItems("foods")}
-            {categoriesNavItems("cosmetics")}
-            {cartNavItem}
-          </Collapse>
-        </Navbar>
-        {subMenuHoverBrowser}
-      </div>
+      <React.Fragment>
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="header__top__left">
+                  <ul>
+                    <li>
+                      <i class="fa fa-envelope"></i> Hello@neworganics.com
+                    </li>
+                    <li>Free Shipping for all Order of $99</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="header__top__right">
+                  <div class="header__top__right__social">
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-pinterest-p"></i>
+                    </a>
+                  </div>
+                  <div class="header__top__right__language">
+                    <img src="img/language.png" alt="" />
+                    <div>English</div>
+                    <span class="arrow_carrot-down"></span>
+                    <ul>
+                      <li>
+                        <a href="#">French</a>
+                      </li>
+                      <li>
+                        <a href="#">English</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header__top__right__auth">
+                    <a href="#">
+                      <i class="fa fa-user"></i>
+                      Login
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="sticky-top">
+          <Navbar light expand="md" style={navbarBackground}>
+            <Link to="/" style={itemMenu} className="text-white">
+              {" "}
+              Home
+            </Link>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={isOpen} navbar>
+              {categoriesNavItems("foods")}
+              {categoriesNavItems("cosmetics")}
+              {cartNavItem}
+            </Collapse>
+          </Navbar>
+          {subMenuHoverBrowser}
+        </div>
+      </React.Fragment>
     );
   }
 }
