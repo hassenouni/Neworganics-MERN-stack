@@ -22,6 +22,11 @@ const styles = {
   itemMenu: {
     padding: "10px",
     listStyleType: "none",
+    FontSize: "14px",
+    color: "#252525",
+    textTransform: "uppercase",
+    fontWeight: "700",
+    letterSpacing:"2px",
   },
   arrowDown: {
     width: 0,
@@ -33,7 +38,7 @@ const styles = {
     zIndex: "3",
   },
   navbarBackground: {
-    backgroundColor: "#072a48",
+    backgroundColor: "#fff",
     zIndex: 3,
   },
 };
@@ -123,7 +128,8 @@ class NavbarContainer extends Component {
         <NavItem>
           <div
             onClick={() => this.setState({ openCartPreview: !openCartPreview })}
-            className="text-white"
+            style={itemMenu}
+             className="text-white"
           >
             Cart
             <Badge color="success" pill>
@@ -149,7 +155,7 @@ class NavbarContainer extends Component {
       </Nav>
     ) : (
       <NavItem style={itemMenu}>
-        <NavLink to="/cart" className="text-white" onClick={this.toggle}>
+        <NavLink to="/cart"  style={itemMenu} className="text-white" onClick={this.toggle}>
           cart
         </NavLink>
       </NavItem>
